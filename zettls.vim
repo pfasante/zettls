@@ -1,4 +1,10 @@
-"https://learnvimscriptthehardway.stevelosh.com/chapters/46.html
+" Vim syntax file
+" Language: zettls
+" Maintainer: Friedrich Wiemer
+" Latest Revision: 27 March 2021
+
+" https://vim.fandom.com/wiki/Creating_your_own_syntax_files
+" https://learnvimscriptthehardway.stevelosh.com/chapters/46.html
 
 if exists("b:current_syntax")
     finish
