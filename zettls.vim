@@ -10,12 +10,22 @@ if exists("b:current_syntax")
     finish
 endif
 
-syntax keyword zettlsKeyword loop times to while
-syntax keyword zettlsKeyword if elsif else
-syntax keyword zettlsKeyword class return
-highlight link zettlsKeyword Keyword
+syntax match zettlsTask "\v\s*\..*$"
+highlight link zettlsTask PreProc
 
-syntax match zettlsComment "\v#.*$"
-highlight link zettlsComment Comment
+syntax match zettlsTaskDone "\v\s*x.*$"
+highlight link zettlsTaskDone Statement
+
+syntax match zettlsEvent "\v\s*o.*$"
+highlight link zettlsEvent Type
+
+syntax match zettlsInfo "\v\s*\-.*$"
+highlight link zettlsInfo Constant
+
+syntax match zettlsMigrate "\v\s*\>.*$"
+highlight link zettlsMigrate Comment
+
+syntax match zettlsStar "\v\s*\*.*$"
+highlight link zettlsStar Todo
 
 let b:current_syntax = "zettls"
